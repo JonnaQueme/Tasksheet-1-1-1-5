@@ -1,1 +1,22 @@
+public class Task5 {
+    public static void main(String[] args) {
+        try (Scanner input1 = new Scanner(System.in)) {
+            System.out.println("Enter a word:");
+            String word = input1.nextLine();
 
+            System.out.println("Enter your age:");
+            int age = input1.nextInt();
+            if (age < 0 || age > 100) {
+                System.out.println("Invalid age. Age should be between 0 and 100.");
+                return;
+            }
+
+            StringBuilder sb1 = new StringBuilder(word.toLowerCase());
+            if (sb1.toString().equals(sb1.reverse().toString())) {
+                System.out.println("The input string is a palindrome.");
+            } else {
+                System.out.println("The input string is not a palindrome.");
+            }
+        }
+    }
+}
